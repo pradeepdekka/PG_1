@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Dry Fruits Shop</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #4a2c2a; /* Rich Brown Color */
+            scroll-behavior: smooth;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background-color: #b86b00; /* Warm Orange */
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff; /* White */
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #f3be7d; /* Darker Orange */
+        }
+
+        /* Hero Section */
+        #home {
+            background: url('dryfruits_background.jpg') no-repeat center center/cover;
+            padding: 150px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #home h1 {
+            font-size: 3em;
+            color: #7d4727;
+            margin-bottom: 20px;
+        }
+
+        #home p {
+            font-size: 1.5em;
+            color: #7d4727;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            background-color: #b86b00;
+            color: #ffffff;
+            padding: 12px 30px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #a65b00;
+        }
+
+        /* About Section */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        #about h2, #benefits h2, #items h2, #testimonials h2, #quality h2, #contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #7d4727;
+        }
+
+        #about p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #4a2c2a;
+        }
+
+        /* Benefits Section */
+        #benefits {
+            background-color: #ffe6c6;
+        }
+
+        #benefits ul {
+            list-style: none;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        #benefits ul li {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #fff5e1;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Items Section */
+        #items {
+            background: url('dryfruits_items_background.jpg') no-repeat center center/cover;
+        }
+
+        #items .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #items .item img {
+            max-width: 120px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        #items .item .item-info {
+            flex-grow: 1;
+            text-align: left;
+            color: #4a2c2a;
+        }
+
+        #items .item .item-info h3 {
+            margin: 0;
+            color: #7d4727;
+        }
+
+        #items .item .item-info p {
+            margin: 5px 0;
+        }
+
+        /* Testimonials Section */
+        #testimonials {
+            background-color: #ffe6c6;
+        }
+
+        .testimonial {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial .author {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #b86b00;
+        }
+
+        /* Quality Section */
+        #quality {
+            background-color: #ffe6c6;
+        }
+
+        #quality p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #4a2c2a;
+        }
+
+        /* Contact Section */
+        #contact p {
+            font-size: 1.2em;
+            color: #4a2c2a;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #b86b00;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Scrolled Navbar */
+        .scrolled {
+            background-color: rgba(184, 107, 0, 0.9);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#items">Items</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to Premium Dry Fruits</h1>
+        <p>Discover the finest selection of premium dry fruits for a healthier lifestyle.</p>
+        <a href="#items" class="btn">Explore Our Products</a>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Premium Dry Fruits, we are passionate about bringing the best quality dry fruits to your table. With a commitment to freshness, purity, and sustainability, we ensure every product meets the highest standards.</p>
+    </section>
+
+    <section id="benefits">
+        <h2>Benefits of Dry Fruits</h2>
+        <ul>
+            <li>Rich in vitamins and minerals like potassium, calcium, and iron.</li>
+            <li>High in dietary fiber, supporting digestion and gut health.</li>
+            <li>Good source of healthy fats, beneficial for heart health.</li>
+            <li>Loaded with antioxidants that help reduce inflammation and protect against chronic diseases.</li>
+            <li>Boost energy levels and are ideal for quick, nutritious snacks.</li>
+        </ul>
+    </section>
+
+    <section id="items">
+        <h2>Our Products</h2>
+        <div class="item">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.vrbreWIjNNWRkdpO05WrLwHaHa&pid=Api&P=0&h=180" alt="Almonds">
+            <div class="item-info">
+                <h3>Premium Almonds</h3>
+                <p>Price: $15.99 / 500g</p>
+                <p>Our premium almonds are handpicked to ensure top quality and rich flavor. Perfect for snacking or adding to your favorite dishes.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.NlfACdkO2__YI_VEKnvvFQHaHa&pid=Api&P=0&h=180" alt="Cashews" >       
+            <div class="item-info">
+                <h3>Deluxe Cashews</h3>
+                <p>Price: $12.99 / 500g</p>
+                <p>Deluxe cashews with a buttery, creamy texture and taste. Packed with nutrients and perfect for a healthy snack or cooking ingredient.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">
+            <p>"The quality of dry fruits from Premium Dry Fruits is unmatched. I feel healthier and more energetic since I started incorporating them into my daily routine."</p>
+            <p class="author">- Sarah L.</p>
+        </div>
+        <div class="testimonial">
+            <p>"These are the best dry fruits I've ever purchased. Fresh, delicious, and perfect for snacking. Highly recommend Premium Dry Fruits!"</p>
+            <p class="author">- John M.</p>
+        </div>
+    </section>
+
+    <section id="quality">
+        <h2>Our Quality Promise</h2>
+        <p>At Premium Dry Fruits, we are dedicated to providing you with the highest quality dry fruits. We work closely with farmers and suppliers to ensure that every product is fresh, delicious, and nutritious. Our products are free from artificial additives and preservatives, ensuring that you get only the best nature has to offer.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries, please email us at: info@premiumdryfruits.com or call us at: +123-456-7890</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Premium Dry Fruits. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Change navbar background on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.pageYOffset > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>
